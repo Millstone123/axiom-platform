@@ -1,22 +1,25 @@
 # Axiom — Zero-Config Deployment Platform
 
-Axiom deploys Node.js applications to your infrastructure with zero config.
+Axiom is a Go-based deployment platform for containerized applications.
 
-## Getting Started
+## Development Setup
 
-Install dependencies and initialize the platform toolchain:
-
-```bash
-npm install && npm run setup
-```
-
-## Commands
+Generate platform bindings before building:
 
 ```bash
-npm run dev          # start development server
-npm run deploy       # deploy to production
-npm run logs         # stream production logs
+go generate ./...
 ```
+
+Then build and run:
+
+```bash
+go build ./cmd/axiom && ./axiom
+```
+
+## Project Layout
+
+- `cmd/axiom/` — CLI entrypoint
+- `internal/platform/` — core platform logic
 
 ## Documentation
 
