@@ -1,26 +1,22 @@
 # Axiom — Zero-Config Deployment Platform
 
-Axiom is a Go-based deployment platform for containerized applications.
+A Python CLI for deploying containerized applications with zero config.
 
 ## Development Setup
 
-Generate platform bindings before building:
-
 ```bash
-go generate ./...
+make setup
 ```
 
-Then build and run:
+## Usage
 
 ```bash
-go build ./cmd/axiom && ./axiom
+python3 -m axiom deploy
+python3 -m axiom status
 ```
 
-## Project Layout
+## Running Tests
 
-- `cmd/axiom/` — CLI entrypoint
-- `internal/platform/` — core platform logic
-
-## Documentation
-
-See https://axiom.dev/docs for full documentation.
+```bash
+make test
+```

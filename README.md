@@ -5,12 +5,11 @@ Deploy containerized applications to your infrastructure with zero config.
 ## Quick Start
 
 ```bash
-go generate ./...
-go build ./cmd/axiom
-./axiom deploy
+make setup
+python3 -m axiom deploy
 ```
 
 ## Requirements
 
-- Go 1.23+
-- Docker (for local container builds)
+- Python 3.11+
+- Docker (for container builds)
