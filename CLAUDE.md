@@ -1,22 +1,22 @@
 # Axiom — Zero-Config Deployment Platform
 
-A Python CLI for deploying containerized applications with zero config.
+A Python CLI for deploying containerised applications with zero config.
 
 ## Development Setup
 
 ```bash
-make setup
+pip3 install -r requirements.txt
 ```
 
 ## Usage
 
 ```bash
-python3 -m axiom deploy
-python3 -m axiom status
+axiom deploy
+axiom status
 ```
 
 ## Running Tests
 
 ```bash
-make test
+pytest
 ```

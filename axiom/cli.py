@@ -5,7 +5,6 @@ from axiom import __version__
 @click.version_option(__version__)
 def cli():
     """Axiom deployment platform."""
-    pass
 
 @cli.command()
 def deploy():
@@ -16,6 +15,3 @@ def deploy():
 def status():
     """Show deployment status."""
     click.echo("Status: OK")
-
-if __name__ == "__main__":
-    cli()
