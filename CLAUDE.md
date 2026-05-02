@@ -5,18 +5,12 @@ A Python CLI for deploying containerised applications with zero config.
 ## Development Setup
 
 ```bash
-pip3 install -r requirements.txt
+make setup
 ```
 
 ## Usage
 
 ```bash
-axiom deploy
-axiom status
-```
-
-## Running Tests
-
-```bash
-pytest
+python3 -m axiom deploy
+python3 -m axiom status
 ```
