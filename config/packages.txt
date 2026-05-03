@@ -1,6 +1,0 @@
-git
-curl
-jq
-ripgrep
-fzf
-direnv
