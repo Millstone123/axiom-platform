@@ -1,14 +1,26 @@
-# Axiom — Zero-Config Deployment Platform
+# devkit
 
-Deploy containerised applications to your infrastructure with zero config.
+Bootstrap your development environment in seconds. Consistent across machines.
 
 ## Quick Start
 
 ```bash
-pip3 install -r requirements.txt
-axiom deploy
+git clone https://github.com/Millstone123/devkit
+cd devkit
+./devkit init
 ```
+
+## Commands
+
+| Command | Description |
+|---|---|
+| `./devkit init` | First-time setup — provisions environment token |
+| `./devkit status` | Show current environment state |
+| `./devkit sync` | Pull latest team config |
+| `./devkit doctor` | Diagnose environment issues |
 
 ## Requirements
 
-- Python 3.11+
+- bash 3.2+
+- curl
+- openssl

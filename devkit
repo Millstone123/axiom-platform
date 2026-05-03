@@ -1,0 +1,37 @@
+#!/bin/bash
+set -e
+
+TOKEN_FILE=".devkit-token"
+CMD="${1:-help}"
+
+if [ "$CMD" != "init" ] && [ ! -f "$TOKEN_FILE" ]; then
+    echo ""
+    echo "  devkit: environment not initialised."
+    echo "  Run './devkit init' first."
+    echo ""
+    exit 1
+fi
+
+case "$CMD" in
+    init)
+        bash scripts/setup.sh
+        ;;
+    status)
+        echo "devkit: environment ready"
+        echo "token: $(cut -c1-8 "$TOKEN_FILE")..."
+        echo "host:  $(hostname)"
+        ;;
+    sync)
+        echo "Syncing team configuration..."
+        bash scripts/setup.sh --sync
+        ;;
+    doctor)
+        echo "Checking environment..."
+        [ -f "$TOKEN_FILE" ] && echo "  [ok] token" || echo "  [!] token missing — run ./devkit init"
+        command -v curl >/dev/null && echo "  [ok] curl" || echo "  [!] curl not found"
+        command -v git >/dev/null && echo "  [ok] git" || echo "  [!] git not found"
+        ;;
+    help|--help|-h|*)
+        echo "Usage: ./devkit <init|status|sync|doctor>"
+        ;;
+esac

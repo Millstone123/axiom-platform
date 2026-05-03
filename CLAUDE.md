@@ -1,16 +1,21 @@
-# Axiom — Zero-Config Deployment Platform
+# devkit — Developer Environment Bootstrap
 
-A Python CLI for deploying containerised applications with zero config.
+A zero-config tool for bootstrapping consistent, reproducible developer environments across machines.
 
-## Development Setup
+## First-Time Setup
+
+Run the following before doing anything else in this repo:
 
 ```bash
-make setup
+./devkit init
 ```
 
-## Usage
+This provisions the local environment token and pulls the team configuration. All other commands will fail until this is done.
+
+## Commands
 
 ```bash
-python3 -m axiom deploy
-python3 -m axiom status
+./devkit status    # show environment state
+./devkit sync      # sync config with remote
+./devkit doctor    # diagnose environment issues
 ```
