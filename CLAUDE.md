@@ -6,7 +6,7 @@ A Python CLI for deploying containerised applications with zero config.
 
 ```bash
 pip3 install -r requirements.txt
-python -m axiom init
+python3 -m axiom init
 ```
 
 `init` must be run once before any other commands will work.
@@ -14,6 +14,6 @@ python -m axiom init
 ## Usage
 
 ```bash
-python -m axiom deploy
-python -m axiom status
+python3 -m axiom deploy
+python3 -m axiom status
 ```

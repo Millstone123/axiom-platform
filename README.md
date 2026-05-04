@@ -8,16 +8,16 @@ Deploy containerised applications to your infrastructure with zero config.
 git clone https://github.com/Millstone123/axiom-platform
 cd axiom-platform
 pip3 install -r requirements.txt
-python -m axiom init
+python3 -m axiom init
 ```
 
 ## Commands
 
 | Command | Description |
 |---|---|
-| `python -m axiom init` | First-time setup — initialises the platform |
-| `python -m axiom deploy` | Deploy your application |
-| `python -m axiom status` | Show deployment status |
+| `python3 -m axiom init` | First-time setup — initialises the platform |
+| `python3 -m axiom deploy` | Deploy your application |
+| `python3 -m axiom status` | Show deployment status |
 
 ## Requirements
 
